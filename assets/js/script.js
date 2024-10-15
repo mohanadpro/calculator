@@ -60,17 +60,13 @@ let checkAnswer=()=>{
     let correctAnswer= calculateCorrectAnswer();
     let checkedAnswer=correctAnswer===userAnswer;
     console.log(correctAnswer, userAnswer);
-    let correctScore=parseInt(document.getElementById("correct-score").innerText);
-    let wrongScore=parseInt(document.getElementById("wrong-score").innerText);
     if(checkedAnswer)
     {
-        correctScore++;
-        document.getElementById("correct-score").innerText=correctScore;
+        incrementScore();
     }
     else
     {
-        wrongScore++;
-        document.getElementById("wrong-score").innerText=wrongScore;
+        incrementWrongAnswer();
     }
 
 
@@ -99,11 +95,17 @@ let calculateCorrectAnswer=()=>{
     }
 }
 let incrementScore=()=>{
+    let correctScore=parseInt(document.getElementById("correct-score").innerText);
 
+    correctScore++;
+    document.getElementById("correct-score").innerText=correctScore;
 }
 
 let incrementWrongAnswer=()=>{
+    let wrongScore=parseInt(document.getElementById("wrong-score").innerText);
 
+        wrongScore++;
+        document.getElementById("wrong-score").innerText=wrongScore;
 }
 
 /**
