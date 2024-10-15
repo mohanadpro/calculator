@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded",function(){
             {
                 case "submission":
                     checkAnswer();
+                    runGame('addition');
                     break;
                 case "addition":
                     runGame("addition");
@@ -27,6 +28,13 @@ document.addEventListener("DOMContentLoaded",function(){
             }
         })
     }
+    document.getElementById("answer-box").addEventListener("keydown",function(e){
+        if(e.key=="Enter")
+        {
+            checkAnswer();
+            runGame("addition");
+        }
+    })
     runGame("addition");
 })
 /**
@@ -34,6 +42,8 @@ document.addEventListener("DOMContentLoaded",function(){
  * and after the question is answered
  */
 let runGame=(dataType)=>{
+    document.getElementById("answer-box").value="";
+    document.getElementById("answer-box").focus();
     let firstNumber=Math.floor(Math.random()*25)+1;
     let secondNumber=Math.floor(Math.random()*25)+1;
     switch(dataType)
@@ -68,7 +78,7 @@ let checkAnswer=()=>{
     {
         incrementWrongAnswer();
     }
-
+    
 
 }
 
