@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Love Math</title>
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -13,13 +15,37 @@
     </h1>
 
     <div class="game-area">
+        <div class="control-area">
+            <button id="btn btn-bg btn-green">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <button id="btn btn-bg btn-blue">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+            <button id="multiple-red">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            <button id="divid-yellow">
+                <i class="fa-solid fa-divide"></i>
+            </button>
+        </div>
+        <div class="question-area">
+            <span id="operand1">0</span>
+            <span id="operator">X</span>
+            <span id="operand2">0</span>
+            <span>=</span>
+            <p class="answer-message">Enter Answer: </p>
+            <input type="number" name="answer" id="answer-box">
+        </div>
+        <button class="btn btn-gray">Submit Answer</button>
 
     </div>
     <div class="score-area">
         <p>Your have <span id="score">0</span> correct Answers</p>
         <p>Your have <span id="score">0</span> wrong Answers</p>
     </div>
-    
+    <script src="assets/js/all.js"></script>
+    <script src="assets/js/fontawesome.js"></script>
     <script src="assets/js/script.js" ></script>
 </body>
 </html>
