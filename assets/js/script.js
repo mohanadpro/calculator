@@ -58,8 +58,27 @@ let checkAnswer=()=>{
 
 }
 
-let calculateCorrectAnswer=()=>{
+/**
+ * it gets the operands and operator from the page
+ * and depend on the operator it make the calculation and return the value
+ */
 
+let calculateCorrectAnswer=()=>{
+    let operand1=parseInt(document.getElementById("operand1"));
+    let operand2=parseInt(document.getElementById("operand2"));
+    let operator=document.getElementById("operator");
+
+    switch(operator)
+    {
+        case "+":
+            return operand1+operand2;
+        case "-":
+            return operand1-operand2;   
+        case "X":
+            return operand1*operand2;
+        case "/":
+            return operand1/operand2;                                 
+    }
 }
 let incrementScore=()=>{
 
