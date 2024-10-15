@@ -17,10 +17,15 @@ document.addEventListener("DOMContentLoaded",function(){
         })
     }
 })
-
+/**
+ * This function runs once the DOM is loaded 
+ * and after the question is answered
+ */
 let runGame=()=>{
-
+    let firstNumber=Math.floor(Math.random()*25)+1;
+    let secondNumber=Math.floor(Math.random()*25)+1;
 }
+
 
 let checkAnswer=()=>{
 
