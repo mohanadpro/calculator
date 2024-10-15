@@ -16,16 +16,16 @@
 
     <div class="game-area">
         <div class="control-area">
-            <button id="btn btn-bg btn-green">
+            <button data-type="Addition" class="btn btn--big btn--green">
                 <i class="fa-solid fa-plus"></i>
             </button>
-            <button id="btn btn-bg btn-blue">
+            <button data-type="subtraction" class="btn btn--big btn--blue">
                 <i class="fa-solid fa-minus"></i>
             </button>
-            <button id="multiple-red">
+            <button data-type="multiply" class="btn btn--big btn--gray">
                 <i class="fa-solid fa-times"></i>
             </button>
-            <button id="divid-yellow">
+            <button data-type="division" class="btn btn--big btn--orange">
                 <i class="fa-solid fa-divide"></i>
             </button>
         </div>
@@ -37,9 +37,10 @@
             <p class="answer-message">Enter Answer: </p>
             <input type="number" name="answer" id="answer-box">
         </div>
-        <button class="btn btn-gray">Submit Answer</button>
+        <button class="btn btn--gray">Submit Answer</button>
 
     </div>
+
     <div class="score-area">
         <p>Your have <span id="score">0</span> correct Answers</p>
         <p>Your have <span id="score">0</span> wrong Answers</p>
