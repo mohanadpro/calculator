@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded",function(){
             switch(this.getAttribute("data-type"))
             {
                 case "submission":
-                    alert(`You have clicked submition`);
+                    checkAnswer();
                     break;
                 case "addition":
                     runGame("addition");
@@ -55,6 +55,24 @@ let runGame=(dataType)=>{
 
 
 let checkAnswer=()=>{
+    let userAnswer=parseInt(document.getElementById("answer-box").value);
+
+    let correctAnswer= calculateCorrectAnswer();
+    let checkedAnswer=correctAnswer===userAnswer;
+    console.log(correctAnswer, userAnswer);
+    let correctScore=parseInt(document.getElementById("correct-score").innerText);
+    let wrongScore=parseInt(document.getElementById("wrong-score").innerText);
+    if(checkedAnswer)
+    {
+        correctScore++;
+        document.getElementById("correct-score").innerText=correctScore;
+    }
+    else
+    {
+        wrongScore++;
+        document.getElementById("wrong-score").innerText=wrongScore;
+    }
+
 
 }
 
@@ -64,10 +82,10 @@ let checkAnswer=()=>{
  */
 
 let calculateCorrectAnswer=()=>{
-    let operand1=parseInt(document.getElementById("operand1"));
-    let operand2=parseInt(document.getElementById("operand2"));
-    let operator=document.getElementById("operator");
-
+    let operand1=parseInt(document.getElementById("operand1").innerText);
+    let operand2=parseInt(document.getElementById("operand2").innerText);
+    let operator=document.getElementById("operator").innerText;
+    console.log(operator);
     switch(operator)
     {
         case "+":
